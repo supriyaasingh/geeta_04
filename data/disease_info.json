@@ -1,0 +1,136 @@
+{
+  "Apple___Apple_scab": {
+    "description": "Apple scab is a fungal disease caused by Venturia inaequalis that affects apple trees and their fruit. It's one of the most serious diseases of apple trees worldwide.",
+    "symptoms": "Dark, scaly lesions on leaves and fruit. Leaves may yellow and drop prematurely. Fruit develops dark, corky spots that can crack.",
+    "remedies": [
+      "Apply fungicides containing sulfur or copper during early spring",
+      "Remove and destroy infected leaves and fruit from around trees",
+      "Improve air circulation by proper pruning",
+      "Plant disease-resistant apple varieties",
+      "Apply dormant oil in early spring before bud break"
+    ]
+  },
+  "Apple___Black_rot": {
+    "description": "Black rot is a fungal disease caused by Botryosphaeria obtusa that affects apple trees, causing leaf spots, fruit rot, and cankers.",
+    "symptoms": "Brown to black circular spots on leaves with purple borders. Infected fruit develops dark, sunken lesions and may mummify on the tree.",
+    "remedies": [
+      "Remove and destroy infected plant parts immediately",
+      "Apply preventive fungicides in early spring",
+      "Ensure proper drainage around tree base",
+      "Prune to improve air circulation",
+      "Remove mummified fruit from trees and ground"
+    ]
+  },
+  "Apple___Cedar_apple_rust": {
+    "description": "Cedar apple rust is a fungal disease caused by Gymnosporangium juniperi-virginianae that alternates between cedar/juniper trees and apple trees.",
+    "symptoms": "Bright yellow spots on upper leaf surfaces that develop orange, tube-like structures. Leaves may drop prematurely, reducing tree vigor.",
+    "remedies": [
+      "Remove nearby cedar or juniper trees if possible",
+      "Apply fungicides during wet spring periods",
+      "Plant resistant apple varieties",
+      "Remove infected leaves promptly",
+      "Improve air circulation around trees"
+    ]
+  },
+  "Apple___healthy": {
+    "description": "The apple plant appears healthy with no visible signs of disease. Healthy apple trees have vibrant green foliage and proper growth patterns.",
+    "symptoms": "Green, unblemished leaves with no spots, discoloration, or abnormal growth patterns. Normal fruit development if in season.",
+    "remedies": [
+      "Continue regular watering schedule",
+      "Apply balanced fertilizer as needed",
+      "Monitor regularly for early disease detection",
+      "Maintain good garden hygiene",
+      "Ensure adequate sunlight and air circulation",
+      "Practice preventive care during disease-prone seasons"
+    ]
+  },
+  "Corn_(maize)___Cercospora_leaf_spot": {
+    "description": "Cercospora leaf spot is a fungal disease caused by Cercospora zeae-maydis that affects corn plants, particularly in warm, humid conditions.",
+    "symptoms": "Small, rectangular gray or tan spots with dark reddish-brown borders on leaves. Spots may merge to form large blighted areas.",
+    "remedies": [
+      "Apply fungicides containing strobilurin or triazole",
+      "Practice crop rotation with non-host crops",
+      "Remove and destroy crop debris after harvest",
+      "Plant resistant corn varieties when available",
+      "Ensure proper plant spacing for air circulation"
+    ]
+  },
+  "Corn_(maize)___Common_rust": {
+    "description": "Common rust is a fungal disease caused by Puccinia sorghi that creates characteristic rust-colored pustules on corn leaves.",
+    "symptoms": "Small, reddish-brown to golden pustules scattered on both leaf surfaces. Pustules may rupture and release orange spores.",
+    "remedies": [
+      "Apply fungicides if infection becomes severe",
+      "Plant resistant corn hybrids",
+      "Ensure proper plant spacing for air circulation",
+      "Remove infected plant debris",
+      "Monitor weather conditions - disease spreads in cool, humid weather"
+    ]
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "description": "Northern leaf blight is a fungal disease caused by Exserohilum turcicum that produces elongated lesions on corn leaves.",
+    "symptoms": "Long, elliptical gray-green to tan lesions with dark borders on leaves. Lesions may merge and cause significant leaf damage.",
+    "remedies": [
+      "Apply fungicides containing azoxystrobin or propiconazole",
+      "Practice crop rotation with non-host crops for 2-3 years",
+      "Plant resistant corn varieties",
+      "Manage crop residue by tillage or chopping",
+      "Avoid overhead irrigation when possible"
+    ]
+  },
+  "Corn_(maize)___healthy": {
+    "description": "The corn plant appears healthy with normal growth and development. Healthy corn plants have upright, green leaves and proper development.",
+    "symptoms": "Green, upright leaves with no lesions, spots, or discoloration. Normal plant height and ear development for the growth stage.",
+    "remedies": [
+      "Continue proper fertilization program",
+      "Monitor for pest and disease pressure regularly",
+      "Maintain adequate soil moisture",
+      "Ensure proper plant spacing and population",
+      "Practice good field sanitation",
+      "Scout fields regularly during growing season"
+    ]
+  },
+  "Tomato___Bacterial_spot": {
+    "description": "Bacterial spot is caused by Xanthomonas species and affects tomato plants, causing leaf spots and fruit lesions.",
+    "symptoms": "Small, dark brown spots with yellow halos on leaves. Fruit develops raised, scaly spots that may crack.",
+    "remedies": [
+      "Apply copper-based bactericides",
+      "Remove infected plant parts",
+      "Improve air circulation",
+      "Avoid overhead watering",
+      "Use disease-free seeds and transplants"
+    ]
+  },
+  "Tomato___Early_blight": {
+    "description": "Early blight is a fungal disease caused by Alternaria solani that affects tomato plants throughout the growing season.",
+    "symptoms": "Dark brown spots with concentric rings on older leaves. Lesions may have yellow halos and cause leaf yellowing.",
+    "remedies": [
+      "Apply fungicides preventively",
+      "Remove lower leaves touching the ground",
+      "Mulch around plants",
+      "Provide good air circulation",
+      "Water at soil level, not on leaves"
+    ]
+  },
+  "Tomato___Late_blight": {
+    "description": "Late blight is a devastating fungal disease caused by Phytophthora infestans that can destroy entire tomato crops.",
+    "symptoms": "Water-soaked spots on leaves that turn brown. White fuzzy growth may appear on leaf undersides in humid conditions.",
+    "remedies": [
+      "Apply fungicides at first sign of disease",
+      "Remove infected plants immediately",
+      "Improve air circulation",
+      "Avoid overhead watering",
+      "Plant resistant varieties when available"
+    ]
+  },
+  "Tomato___healthy": {
+    "description": "The tomato plant appears healthy with vigorous growth and no visible disease symptoms.",
+    "symptoms": "Green, healthy foliage with no spots or discoloration. Normal fruit development and plant growth.",
+    "remedies": [
+      "Continue regular care routine",
+      "Monitor for early disease signs",
+      "Maintain proper watering schedule",
+      "Ensure adequate nutrition",
+      "Practice good garden hygiene"
+    ]
+  }
+}

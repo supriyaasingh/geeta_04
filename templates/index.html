@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection - AI-Powered Agri-Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>PlantDoc AI</span>
+                </div>
+                <nav class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#upload" class="nav-link">Diagnose</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI-Powered Plant Disease Detection
+                </h1>
+                <p class="hero-subtitle">
+                    Upload a photo of your plant leaf and get instant disease diagnosis with recommended treatments. 
+                    Powered by advanced CNN technology and trained on the PlantVillage dataset.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToUpload()">
+                        <i class="fas fa-camera"></i>
+                        Start Diagnosis
+                    </button>
+                    <button class="btn btn-secondary" onclick="trainModel()">
+                        <i class="fas fa-brain"></i>
+                        Train Model
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Disease Types</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Plant Species</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Disease Diagnosis</h2>
+                <p class="section-subtitle">Upload an image of your plant leaf for instant AI-powered analysis</p>
+            </div>
+
+            <!-- Model Status -->
+            <div id="model-status" class="model-status">
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="status-info">
+                        <div class="status-title">AI Model Status</div>
+                        <div id="status-text" class="status-text">Checking...</div>
+                    </div>
+                    <div id="status-indicator" class="status-indicator"></div>
+                </div>
+            </div>
+
+            <div class="upload-container">
+                <!-- Upload Area -->
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-content">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3>Drop your plant image here</h3>
+                        <p>or click to select a file</p>
+                        <div class="upload-formats">
+                            <span>Supports: JPG, PNG, JPEG, GIF</span>
+                        </div>
+                        <input type="file" id="file-input" accept=".jpg,.jpeg,.png,.gif" hidden>
+                        <button class="btn btn-upload" onclick="document.getElementById('file-input').click()">
+                            <i class="fas fa-image"></i>
+                            Choose Image
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loading" class="loading hidden">
+                    <div class="loading-spinner"></div>
+                    <p>Analyzing your plant image...</p>
+                </div>
+
+                <!-- Results Section -->
+                <div id="results" class="results hidden">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Diagnosis Results</h3>
+                            <div id="confidence-badge" class="confidence-badge"></div>
+                        </div>
+                        
+                        <div class="result-content">
+                            <div class="result-image">
+                                <img id="uploaded-image" src="" alt="Uploaded plant image">
+                            </div>
+                            
+                            <div class="result-details">
+                                <div class="disease-info">
+                                    <h4 id="disease-name"></h4>
+                                    <p id="disease-description"></p>
+                                </div>
+                                
+                                <div class="symptoms">
+                                    <h5><i class="fas fa-stethoscope"></i> Symptoms</h5>
+                                    <p id="disease-symptoms"></p>
+                                </div>
+                                
+                                <div class="remedies">
+                                    <h5><i class="fas fa-prescription-bottle-alt"></i> Recommended Treatment</h5>
+                                    <ul id="disease-remedies"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button class="btn btn-primary" onclick="resetUpload()">
+                                <i class="fas fa-redo"></i>
+                                Analyze Another Image
+                            </button>
+                            <button class="btn btn-secondary" onclick="downloadReport()">
+                                <i class="fas fa-download"></i>
+                                Download Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About PlantDoc AI</h2>
+                <p class="section-subtitle">Advanced AI technology for agricultural disease detection</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>CNN Technology</h3>
+                    <p>Our deep learning model uses Convolutional Neural Networks trained on thousands of plant images for accurate disease identification.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>PlantVillage Dataset</h3>
+                    <p>Trained on the comprehensive PlantVillage dataset containing over 50,000 images of healthy and diseased plant leaves.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Multiple Species</h3>
+                    <p>Supports detection for Apple, Corn, Tomato, and other major crop species with expanding coverage.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Easy to Use</h3>
+                    <p>Simple upload interface works on any device - desktop, tablet, or mobile phone for field use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>PlantDoc AI</span>
+                    </div>
+                    <p>AI-powered plant disease detection for sustainable agriculture.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#upload">Disease Detection</a></li>
+                        <li><a href="#about">CNN Technology</a></li>
+                        <li><a href="#about">PlantVillage Data</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">Documentation</a></li>
+                        <li><a href="#about">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 PlantDoc AI. Built with TensorFlow and Flask.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
