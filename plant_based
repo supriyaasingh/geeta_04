@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial commit of leaf disease detection site"
+git remote add origin https://cursor.com/agents?selectedBcId=bc-959a251f-71eb-485c-9230-cf1cfb87b40d
+git push -u origin master
+git push -u origin main
